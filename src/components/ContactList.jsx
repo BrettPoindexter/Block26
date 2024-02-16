@@ -36,13 +36,13 @@ const ContactList = ({ setSelectedContactId }) => {
             </thead>
             <tbody>
                 <tr>
-                    <td>Name</td>
-                    <td>Email</td>
-                    <td>Phone</td>
+                    <td className='header'>Name</td>
+                    <td className='header'>Email</td>
+                    <td className='header'>Phone</td>
                 </tr>
                 {
                     contacts.map((contact) => {
-                        return <ContactRow key={contact.id} contact={contact} />
+                        return <ContactRow key={contact.id} contact={contact} setSelectedContactId={setSelectedContactId} />
                     })
                 }
             </tbody>
